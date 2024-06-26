@@ -10,7 +10,7 @@ const Form = () => {
     setFormSection(section);
   };
   return (
-    <div className="h-full bg-[#1F1F1F] p-[10px] flex flex-col gap-[18px] text-[14px] font-medium w-[377px]">
+    <div>
       <div className="flex flex-col gap-[14px]">
       <div className="relative w-full max-w-md mx-auto">
           <svg

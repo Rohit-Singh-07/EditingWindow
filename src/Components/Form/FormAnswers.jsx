@@ -21,7 +21,7 @@ const content1 = <div className="flex justify-start gap-x-[8px] gap-y-[14px] w-f
 
 const FormAnswers = () => {
   return (
-    <div className="felx flex-col items-start gap-[20px] flex-1 text-[#8C8C8C] w-full h-full p-[10px] overflow-auto">
+    <div className="felx flex-col items-start gap-[20px] flex-1 text-[#8C8C8C] w-full h-[75vh] overflow-auto p-[10px]">
       <Dropdown content={content1} defaultState={true} title={'Segment One'}/>
       <Dropdown content={content1} title={'Segment Two'}/>
       <Dropdown content={content1} title={'Segment Three'}/>

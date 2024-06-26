@@ -4,10 +4,19 @@ import Layout from "./Layout/Layout";
 
 const SideNav = () => {
   const [tabs, setTabs] = useState("Form");
+  const [open, setOpen] = useState(true);
 
   const handleTabs = (tab) => {
     setTabs(tab);
+    setOpen(true);
   };
+
+  const handleSideNavTab = () => {
+    setOpen(!open);
+  };
+
+  
+
   return (
     <div className="flex">
       <div className="flex items-center justify-center py-[20px] px-[5px] bg-[#141414]">
@@ -46,13 +55,13 @@ const SideNav = () => {
             </button>
           </div>
 
-          <button className="flex flex-col justify-center items-center gap-[4px] py-[4px] px-[10px] h-[86px] w-[86px] rounded-full">
+          <button onClick={handleSideNavTab} className="flex flex-col justify-center items-center gap-[4px] py-[4px] px-[10px] h-[86px] w-[86px] rounded-full">
             <img src="/assets/Icons/menu_open.svg" alt="" />
           </button>
         </div>
       </div>
 
-      { tabs === "Form" ? <Form /> : tabs === "Layout" ? <Layout/> : ""}
+      <div className={`bg-[#1F1F1F] flex flex-col gap-[18px] text-[14px] font-medium transition-all duration-500 overflow-x-hidden p-[10px] ${open ? "w-[377px]" : "w-0 px-[0px]"}`}>{ tabs === "Form" ? <Form /> : tabs === "Layout" ? <Layout/> : ""}</div>
     </div>
   );
 };
