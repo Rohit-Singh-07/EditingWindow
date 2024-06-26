@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Form from "./Form/Form";
 import Layout from "./Layout/Layout";
+import SelectFont from "./SideNavTools/SelectFont";
 
 const SideNav = () => {
   const [tabs, setTabs] = useState("Form");
@@ -62,6 +63,8 @@ const SideNav = () => {
       </div>
 
       <div className={`bg-[#1F1F1F] flex flex-col gap-[18px] text-[14px] font-medium transition-all duration-500 overflow-hidden p-[10px] ${open ? "w-[377px]" : "w-0 px-[0px]"}`}>{ tabs === "Form" ? <Form /> : tabs === "Layout" ? <Layout/> : ""}</div>
+
+      {/* <div className={`bg-[#1F1F1F] flex flex-col gap-[18px] text-[14px] font-medium transition-all duration-500 overflow-hidden p-[10px] ${open ? "w-[377px]" : "w-0 px-[0px]"}`}><SelectFont/></div> */}
     </div>
   );
 };

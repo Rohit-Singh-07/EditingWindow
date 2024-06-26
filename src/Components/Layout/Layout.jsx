@@ -4,7 +4,7 @@ const Layout = () => {
       <div className="flex flex-col gap-[20px]">
         <div className="relative w-full max-w-md mx-auto">
           <svg
-           className="absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-400" 
+            className="absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-400"
             xmlns="http://www.w3.org/2000/svg"
             width="14"
             height="14"
@@ -29,14 +29,36 @@ const Layout = () => {
             placeholder="Search images, texts"
           />
         </div>
-        <div className="h-[75vh] overflow-auto">
-          <div className="flex justify-start gap-x-[8px] gap-y-[14px] w-full flex-wrap">
-            {Array.from({ length: 6 }, (_, index) => (
-              <div
-                key={index}
-                className="w-[163px] h-[197px] rounded-[8px] bg-[#333333]"
-              ></div>
-            ))}
+        <div className="flex flex-col gap-[10px]">
+          <div className="flex items-center gap-[6px] px-[12px] py-[8px] text-[#8C8C8C] text-[14px] font-normal bg-[#333333]">
+            <input className="w-full bg-[#333333] outline-none" type="text" placeholder="Select No of Images" />
+
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M6.99975 5.859L4.41427 8.44449C4.02374 8.83501 3.46972 8.91416 3.17683 8.62127C2.88394 8.32837 2.96308 7.77435 3.35361 7.38383L6.18203 4.5554C6.42532 4.31211 6.73207 4.18967 6.9996 4.20274C7.2672 4.18957 7.57408 4.31201 7.81746 4.55539L10.6459 7.38381C11.0364 7.77434 11.1156 8.32836 10.8227 8.62125C10.5298 8.91414 9.97575 8.835 9.58522 8.44447L6.99975 5.859Z"
+                  fill="#8C8C8C"
+                />
+              </svg>
+            </span>
+          </div>
+          <div className="h-[75vh] overflow-auto">
+            <div className="flex justify-start gap-x-[8px] gap-y-[14px] w-full flex-wrap">
+              {Array.from({ length: 6 }, (_, index) => (
+                <div
+                  key={index}
+                  className="w-[163px] h-[197px] rounded-[8px] bg-[#333333]"
+                ></div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
